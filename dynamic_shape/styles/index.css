@@ -33,7 +33,11 @@ body {
 }
 
 .shape_1 {
-  background: #202020;
+  background-color: #202020;
+}
+
+.shape_2 {
+  background-color: #4B346F;
 }
 
 .shape_1 .inner {
@@ -51,15 +55,34 @@ body {
   bottom: 0;
   border-radius: 100%;
   box-shadow: 0 0 0 3px;
-  -webkit-animation: spinner-bubble 1.3s linear 0s infinite;
-  animation: spinner-bubble 1.3s linear 0s infinite;
+  -webkit-animation: inner-bubble 1.3s linear 0s infinite;
+  animation: inner-bubble 1.3s linear 0s infinite;
   margin: auto;
   width: 10px;
   height: 10px;
   opacity: 0;
 }
 
-@-webkit-keyframes spinner-bubble {
+.shape_2 .inner {
+  border: 1px solid;
+  -webkit-animation: rotate 1.3s linear 0s infinite, color-bubble 3s linear 0s infinite;
+  animation: rotate 1.3s linear 0s infinite, color-bubble 3s linear 0s infinite;
+}
+
+.shape_2 .inner:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 100%;
+  -webkit-animation: color-change 3s linear 0s infinite;
+  animation: color-change 3s linear 0s infinite;
+  left: -5px;
+  top: 18px;
+}
+
+@-webkit-keyframes inner-bubble {
   from {
     width: 10px;
     height: 10px;
@@ -72,7 +95,7 @@ body {
   }
 }
 
-@keyframes spinner-bubble {
+@keyframes inner-bubble {
   from {
     width: 10px;
     height: 10px;
@@ -114,3 +137,58 @@ body {
     color: #FEB825;
   }
 }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    background: #009DDC;
+  }
+  33% {
+    background: #50B949;
+  }
+  66% {
+    background: #EE2D24;
+  }
+  100% {
+    background: #FEB825;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background: #009DDC;
+  }
+  33% {
+    background: #50B949;
+  }
+  66% {
+    background: #EE2D24;
+  }
+  100% {
+    background: #FEB825;
+  }
+}
+
