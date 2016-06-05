@@ -103,6 +103,17 @@ body {
   animation: rotate 2s linear 0s infinite;
 }
 
+.shape_5 {
+  background: #034BB5;
+}
+.shape_5 .inner {
+  border: 5px solid transparent;
+  border-bottom-color: #19A5DF;
+  border-top-color: #19A5DF;
+  -webkit-animation: rotate 1.5s linear 0s infinite;
+  animation: rotate 1.5s linear 0s infinite;
+}
+
 @-webkit-keyframes inner-bubble {
   from {
     width: 10px;
