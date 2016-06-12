@@ -114,6 +114,36 @@ body {
   animation: rotate 1.5s linear 0s infinite;
 }
 
+.shape_6 {
+  background: #009200;
+}
+.shape_6 .inner {
+  border: 2px solid #19A5DF;
+  border-radius: 0;
+  -webkit-animation: rotate 3s infinite;
+  animation: rotate 3s infinite;
+}
+.shape_6 .inner:after, .shape_6 .inner:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FEB825;
+  -webkit-animation: rotate 3s infinite reverse;
+  animation: rotate 3s infinite reverse;
+}
+.shape_6 .inner:before {
+  border-color: #fff;
+  left: 10px;
+  top: 10px;
+  width: 22px;
+  height: 22px;
+  -webkit-animation: rotate 2s infinite;
+  animation: rotate 2s infinite;
+}
+
 @-webkit-keyframes inner-bubble {
   from {
     width: 10px;
