@@ -144,6 +144,30 @@ body {
   animation: rotate 2s infinite;
 }
 
+.shape_7 {
+  background: #FF451C;
+}
+.shape_7 .inner {
+  -webkit-animation: rotate 1.3s linear 0s infinite, size 5s linear 0s infinite alternate;
+  animation: rotate 1.3s linear 0s infinite, size 5s linear 0s infinite alternate;
+}
+.shape_7 .inner:after, .shape_7 .inner:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 100%;
+  left: 0px;
+  top: 0px;
+  bottom: 0;
+  margin: auto;
+}
+.shape_7 .inner:before {
+  left: auto;
+  right: 0;
+}
+
 @-webkit-keyframes inner-bubble {
   from {
     width: 10px;
@@ -307,5 +331,27 @@ body {
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes size {
+  from {
+    width: 70px;
+    height: 70px;
+  }
+  to {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@keyframes size {
+  from {
+    width: 70px;
+    height: 70px;
+  }
+  to {
+    width: 30px;
+    height: 30px;
   }
 }
