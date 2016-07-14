@@ -214,6 +214,16 @@ body {
   animation-direction: reverse;
 }
 
+.shape_10 {
+  background: #3D6AA2;
+}
+.shape_10 .inner {
+  background: #fff;
+  overflow: hidden;
+  -webkit-animation: color-change 3s linear 0s infinite, shadow 1.3s linear 0s infinite, color-bubble 5s linear 0s infinite alternate, rotate 5s linear 0s infinite;
+  animation: color-change 3s linear 0s infinite, shadow 1.3s linear 0s infinite, color-bubble 5s linear 0s infinite alternate, rotate 5s linear 0s infinite;
+}
+
 @-webkit-keyframes inner-bubble {
   from {
     width: 10px;
@@ -440,5 +450,22 @@ body {
   }
   100% {
     box-shadow: 15px 0 0 0, 30px 0 0 0, 45px 0 0 0, 60px 0 0 0, 75px 0 0 5px;
+  }
+}
+
+@-webkit-keyframes shadow {
+  from {
+    box-shadow: 0px 0 0 1px inset;
+  }
+  to {
+    box-shadow: 50px 0 0 1px inset;
+  }
+}
+@keyframes shadow {
+  from {
+    box-shadow: 0px 0 0 1px inset;
+  }
+  to {
+    box-shadow: 50px 0 0 1px inset;
   }
 }
