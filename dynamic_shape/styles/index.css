@@ -15,7 +15,7 @@ body {
 .tab {
   height: 250px;
   float: left;
-  width: 50%;
+  width: 25%;
   position: relative;
 }
 
@@ -222,6 +222,19 @@ body {
   overflow: hidden;
   -webkit-animation: color-change 3s linear 0s infinite, shadow 1.3s linear 0s infinite, color-bubble 5s linear 0s infinite alternate, rotate 5s linear 0s infinite;
   animation: color-change 3s linear 0s infinite, shadow 1.3s linear 0s infinite, color-bubble 5s linear 0s infinite alternate, rotate 5s linear 0s infinite;
+}
+
+.shape_11 {
+  background: #33CC77;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.shape_11:hover {
+  border-radius: 50%;
+  z-index: 9999;
 }
 
 @-webkit-keyframes inner-bubble {
